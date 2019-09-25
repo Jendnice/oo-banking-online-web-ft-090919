@@ -17,6 +17,7 @@ class Transfer
 
   
   def execute_transaction
+    binding.pry 
     if sender.valid? && @sender.balance > @amount && @status == "pending" 
       @sender.balance -= @amount 
       @receiver.deposit(@amount)
@@ -29,8 +30,6 @@ class Transfer
       @status = "rejected"
     end 
   end 
-  
-  
   
   def reverse_transfer
     if @status == "complete"
