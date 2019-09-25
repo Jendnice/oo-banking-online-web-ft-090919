@@ -27,7 +27,7 @@ class Transfer
     else sender.valid? && @status == "complete"
       puts "This transaction has already been completed."
     end   
-      
+ end   
       
       
       
