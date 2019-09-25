@@ -35,7 +35,7 @@ class Transfer
       @sender.balance -= @amount 
       @receiver.deposit(@amount)
       @status = "complete"
-      
+    elsif
       
       
       @status = "rejected"
