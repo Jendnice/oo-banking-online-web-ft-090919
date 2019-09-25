@@ -22,10 +22,9 @@ class Transfer
       @sender.balance -= @amount 
       @receiver.deposit(@amount)
       @status = "complete"
-    elsif 
-      @status == "complete"
+    elsif sender.valid? && @status == "complete"
       puts "This transaction has already been completed."
-    else 
+    else !(sender.valid?) 
       return "Transaction rejected. Please check your account balance."
       @status = "rejected"
     end 
