@@ -26,16 +26,16 @@ class Transfer
   #   end 
   # end 
   
-  def execute_transaction
-    if @sender.close_account == true 
-      @status = "rejected"
-      return "Transaction rejected. Please check your account balance."
-    elsif !(@sender.close_account) == true && @sender.balance > @amount && @status == "pending"
-      @sender.balance -= @amount 
-      @receiver.balance += @amount
-      @status = "complete"
-    end 
-  end 
+  # def execute_transaction
+  #   if @sender.close_account == true 
+  #     @status = "rejected"
+  #     return "Transaction rejected. Please check your account balance."
+  #   elsif !(@sender.close_account) == true && @sender.balance > @amount && @status == "pending"
+  #     @sender.balance -= @amount 
+  #     @receiver.balance += @amount
+  #     @status = "complete"
+  #   end 
+  # end 
   
    
  
