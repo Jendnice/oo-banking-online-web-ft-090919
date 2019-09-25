@@ -30,7 +30,7 @@ class Transfer
     if close_account = true 
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
-    else close_account != true && @sender.balance > @amount && @status == "pending"
+    elsif close_account != true && @sender.balance > @amount && @status == "pending"
       @sender.balance -= @amount 
       @receiver.balance += @amount
       @status = "complete"
