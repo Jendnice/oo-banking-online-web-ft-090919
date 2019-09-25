@@ -23,7 +23,7 @@ class Transfer
       @status = "complete"
     elsif @status == "complete"
       puts "This transaction has already been completed."
-    else !(valid?) 
+    else !(valid?) || @sender.close_account  
       return "Transaction rejected. Please check your account balance."
       @status = "rejected"
     end 
