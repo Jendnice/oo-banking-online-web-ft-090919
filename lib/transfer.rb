@@ -39,6 +39,7 @@ class Transfer
     unless @status == "complete"
       puts "This transaction has already been completed."
     end 
+    end 
   end 
   
   
