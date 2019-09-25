@@ -38,7 +38,7 @@ class Transfer
     elsif 
       @status == "complete"
       puts "This transaction has already been completed."
-    else !(sender.value?)
+    else 
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
     end 
