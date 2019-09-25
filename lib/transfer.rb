@@ -41,8 +41,6 @@ class Transfer
     else
       @status == "complete"
       puts "This transaction has already been completed."
-    else 
-      
     end 
   end 
   
